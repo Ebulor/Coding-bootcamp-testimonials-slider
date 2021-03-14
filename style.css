@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Dark_Blue: hsl(240, 38%, 20%);
+    --Grayish_Blue: hsl(240, 18%, 77%);
+}
+body{
+    font-family: 'Inter', sans-serif;             
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.content{  
+    width: 400px;
+    background-image: url(images/pattern-bg.svg);  
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: top .6em center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 40px 40px 0px 40px ;       
+}
+.content-top{
+    position: relative;
+    border-radius: 10px 10px 100px 100px;
+    box-shadow: 0 25px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);   
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.content-img{
+    width: 100%;
+}
+.content-img img{
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+}
+.button{
+    position: absolute;
+    top: 90%;
+    background-color: white;
+    width: 90px;
+    padding: 15px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.button img{
+    cursor: pointer;
+}
+.content-text{
+    position: relative;
+    width: 350px;
+    text-align: center;
+    margin: 20px 0;
+    padding: 35px 0;
+    padding-bottom: 0;
+    color: var(--Dark_Blue);
+    background-image: url(images/pattern-quotes.svg);  
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: top ;
+}
+.content-text p{
+    font-size: clamp(1.25em, 2.5vw, 2em);
+    font-weight: 300;
+}
+.content-text h3{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;  
+    margin-top: 20px; 
+    font-weight: 700; 
+}
+.content-text h3 span{
+    color: var(--Grayish_Blue);
+    font-size: clamp(12px, 2vw, 14px);
+    font-weight: 500;
+}
+.show{
+    display: none;    
+}
+.hide{
+    display: block;
+}
+.curvedbg img{
+    width: 100%;
+}
+@media (min-width: 800px){ 
+    .content{
+        flex-direction: row-reverse;
+        padding: 55px 0 00px 0;
+        align-items: center;     
+        justify-content: center; 
+        height: 600px;
+        width: 100%;
+        background-image: url(images/pattern-bg.svg);  
+        background-repeat: no-repeat;
+        background-size: 45%;
+        background-position: top 1em right 7em;
+    }
+    .content-top{
+        width: 35%; 
+        margin-right: -30em;       
+    }
+    .content-text{
+        position: absolute;
+        text-align: left;
+        width: 47%;
+        left: 5em;
+        margin-left: 40px; 
+        background-image: url(images/pattern-quotes.svg);  
+        background-repeat: no-repeat;
+        background-size: 20%;
+        background-position: top -1.2em left 5em ;    
+        padding-top: 50px;   
+    }
+    .content-text h3{
+        flex-direction: row;        
+    }
+    .content-text h3 span{
+        margin-left: 10px;
+    }
+    .button{
+        top: 95%;
+        left: 3em;        
+    }
+    .curvedbg img{
+        width: 50%;
+        height: 100px;
+    }
+}
